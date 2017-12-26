@@ -10,8 +10,7 @@
         android:id="@+id/row_val"
         android:layout_width="25dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="4"
+        android:layout_marginStart="10dp"
         android:textAlignment="textEnd"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
@@ -21,16 +20,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Nahrung Sammeln"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/row_attr"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_weight="1"
-        android:text="MU:KO:KK"
+        android:text="@string/attr_placeholder"
         android:textAlignment="textEnd"
         android:textSize="18sp" />
 
