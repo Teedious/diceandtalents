@@ -49,12 +49,10 @@ public class TalentListAdapter extends ArrayAdapter<Talent>
 
             name.setText(tal.getName());
             int[] ids = tal.getAttrID();
-
             attr.setText(
-                    getContext().getResources().getString(R.string.attr_placeholder,
-                            Attributes.ATTR_NUM_STR[ids[0]],
-                            Attributes.ATTR_NUM_STR[ids[1]],
-                            Attributes.ATTR_NUM_STR[ids[2]])
+                    Attributes.ATTR_NUM_STR[ids[0]]
+                            +" · "+Attributes.ATTR_NUM_STR[ids[1]]
+                            +" · "+Attributes.ATTR_NUM_STR[ids[2]]
             );
             val.setText(String.valueOf(tal.getValue()));
 
@@ -69,10 +67,9 @@ public class TalentListAdapter extends ArrayAdapter<Talent>
             holder.value.setText(String.valueOf(holder.tal.getValue()));
             int[] ids = holder.tal.getAttrID();
             holder.attr.setText(
-                    getContext().getResources().getString(R.string.attr_placeholder,
-                            Attributes.ATTR_NUM_STR[ids[0]],
-                            Attributes.ATTR_NUM_STR[ids[1]],
-                            Attributes.ATTR_NUM_STR[ids[2]])
+                    Attributes.ATTR_NUM_STR[ids[0]]
+                    +" · "+Attributes.ATTR_NUM_STR[ids[1]]
+                    +" · "+Attributes.ATTR_NUM_STR[ids[2]]
             );
         }
         return convertView;

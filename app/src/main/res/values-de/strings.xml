@@ -36,13 +36,4 @@
     <string name="new_talent_hint">Talentnamen eingeben</string>
     <string name="talent_mod">Mod</string>
     <string name="talent_roll_style_menu_text">Modifikation von Talent statt Attributen abziehen</string>
-    <string name="attr_in">IN</string>
-    <string name="attr_ch">CH</string>
-    <string name="attr_co">MU</string>
-    <string name="die_abbreviation">W</string>
-    <string name="attr_st">KK</string>
-    <string name="attr_cn">KO</string>
-    <string name="attr_ag">GE</string>
-    <string name="attr_de">FF</string>
-    <string name="attr_cl">KL</string>
 </resources>
