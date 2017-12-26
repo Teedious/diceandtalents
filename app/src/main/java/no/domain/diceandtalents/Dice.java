@@ -440,7 +440,7 @@ class RollResultAdapter extends ArrayAdapter<RollResult>
         super(ctx, R.layout.view_log);
     }
 
-    public View getView(int position, View convertView, ViewGroup parent)
+    public View getView(int position, View convertView, @NonNull ViewGroup parent)
     {
         View res = super.getView(position, convertView, parent);
         ((TextView) res).setTextColor(getItem(position).color);
