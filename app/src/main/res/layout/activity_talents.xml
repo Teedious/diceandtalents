@@ -50,14 +50,13 @@
                         android:id="@+id/act_tal_E_0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="MU"
+                        android:text="@string/attr_co"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -72,14 +71,13 @@
                         android:id="@+id/act_tal_E_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="KL"
+                        android:text="@string/attr_cl"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -94,14 +92,13 @@
                         android:id="@+id/act_tal_E_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IN"
+                        android:text="@string/attr_in"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -116,14 +113,13 @@
                         android:id="@+id/act_tal_E_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CH"
+                        android:text="@string/attr_ch"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -138,14 +134,13 @@
                         android:id="@+id/act_tal_E_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="FF"
+                        android:text="@string/attr_de"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -160,14 +155,13 @@
                         android:id="@+id/act_tal_E_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="GE"
+                        android:text="@string/attr_ag"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -182,14 +176,13 @@
                         android:id="@+id/act_tal_E_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="KO"
+                        android:text="@string/attr_cn"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -204,14 +197,13 @@
                         android:id="@+id/act_tal_E_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="KK"
+                        android:text="@string/attr_st"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/act_tal_W_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -241,7 +233,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:orientation="vertical"
-                    android:paddingLeft="10dp">
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
 
                     <TextView
                         android:id="@+id/talent_roll_info_view"

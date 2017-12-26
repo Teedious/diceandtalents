@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DnT</string>
-    <string name="app_name_long">GameMaster Dice</string>
     <string name="ds_choose">Choose dice</string>
     <string name="ds_custom">More...</string>
     <string name="ds_config">Configure dice</string>
@@ -57,4 +56,18 @@
     <string name="talent_roll_style_menu">Rollstyle Talent</string>
     <string name="new_talent_hint">Enter talent name</string>
     <string name="talent_mod">mod</string>
+    <string name="button_more" translatable="false">...</string>
+    <string name="attr_co">CO</string>
+    <string name="attr_cl">CL</string>
+    <string name="attr_in">IN</string>
+    <string name="attr_ch">CH</string>
+    <string name="attr_de">DE</string>
+    <string name="attr_ag">AG</string>
+    <string name="attr_cn">CN</string>
+    <string name="attr_st">ST</string>
+    <string name="die_abbreviation">d</string>
+    <string name="txt_plus_minus" translatable="false">±</string>
+    <string name="attr_placeholder" translatable="false">%1$s · %2$s · %3$s</string>
+    <string name="throw_placeholder" translatable="false">%1$d · %2$d · %3$d</string>
+    <string name="app_name_long">Dice and Talents</string>
 </resources>
