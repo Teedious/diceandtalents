@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DnT</string>
+    <string name="app_name_long">Dice and Talents</string>
+    <string name="ds_choose">Würfel wählen</string>
+    <string name="ds_custom">Mehr...</string>
+    <string name="ds_config">Würfel konfigurieren</string>
+    <string name="spin_count">Anzahl Würfel</string>
+    <string name="spin_sides">Seitenanzahl</string>
+    <string name="spin_modifier">Modifikator</string>
+
+    <string name="log_empty">Knöpfe zum Würfeln drücken!\n\nLange drücken zum Wert Einstellen.</string>
+    <string name="roll_placeholder">Würfle!</string>
+    <string name="roll_result">Würfelergebnis</string>
+
+    <string name="binary_no">nein</string>
+    <string name="binary_yes">ja</string>
+
+    <string name="menu_screen_on">Bildschirm anlassen</string>
+    <string name="menu_clear_log">Verlauf löschen</string>
+    <string name="menu_about">Über...</string>
+
+    <string name="about_home">Homepage</string>
+    <string name="attribute_text">Eigenschaften</string>
+    <string name="talents_button">Talente</string>
+    <string name="talent_roll_result_empty">Ergebnis Talentwurf</string>
+    <string name="talent_value_caption">Wert</string>
+    <string name="delete_talent">Talent Entfernen</string>
+    <string name="change_talent">Talent ändern</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="menu_new_talent">Neues Talent</string>
+    <string name="menu_edit_attr">Eigenschaften ändern</string>
+    <string name="menu_talent_settings">Talent Einstellungen</string>
+    <string name="dialog_edit_attributes">Eigenschaften ändern</string>
+    <string name="talent_roll_style_menu">Talentwürfeleinstellung</string>
+    <string name="new_talent_hint">Talentnamen eingeben</string>
+    <string name="talent_mod">Mod</string>
+    <string name="talent_roll_style_menu_text">Modifikation von Talent statt Attributen abziehen</string>
+</resources>

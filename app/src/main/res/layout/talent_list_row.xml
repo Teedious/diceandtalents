@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:stackFromBottom="true">
+
+    <TextView
+        android:id="@+id/row_val"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="4"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_talent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Nahrung Sammeln"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/row_attr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="MU:KO:KK"
+        android:textAlignment="textEnd"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DnT</string>
+    <string name="app_name_long">GameMaster Dice</string>
+    <string name="ds_choose">Choose dice</string>
+    <string name="ds_custom">More...</string>
+    <string name="ds_config">Configure dice</string>
+    <string name="spin_count">Number of dice</string>
+    <string name="spin_sides">Sides on a die</string>
+    <string name="spin_modifier">Probe modifier</string>
+
+    <string name="log_empty">Push buttons to roll!\n\nLong-press buttons to configure dice.</string>
+    <string name="roll_placeholder">Roll it!</string>
+    <string name="roll_result">Roll Result</string>
+
+    <string name="binary_no">no</string>
+    <string name="binary_yes">yes</string>
+
+    <string name="menu_screen_on">Keep screen on</string>
+    <string name="menu_clear_log">Clear log</string>
+    <string name="menu_about">About...</string>
+
+    <string name="about_text" translatable="false">Copyright © 2011 Georg Lukas &lt;georg@op-co.de&gt;\n
+    	\n
+	</string>
+    <string name="about_gpl" translatable="false">This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	as published by the Free Software Foundation; either version 2
+	of the License, or (at your option) any later version.
+	\n\n
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	\n\n
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+	\n\n
+	http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+	</string>
+
+    <string name="about_home">Home Page</string>
+    <string name="talents_button">Talents</string>
+    <string name="attribute_text">Attributes</string>
+    <string name="talent_roll_result_empty">Talent Roll Result</string>
+    <string name="talent_value_caption">Value</string>
+    <string name="delete_talent">Delete Talent</string>
+    <string name="change_talent">Change Talent</string>
+    <string name="title_activity_no" translatable="false">no</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_new_talent">New Talent</string>
+    <string name="menu_edit_attr">Edit Attributes</string>
+    <string name="menu_talent_settings">Talent Settings</string>
+    <string name="dialog_edit_attributes">Edit Attributes</string>
+    <string name="talent_roll_style_menu_text">Subtract Modificator from Talent instead of Attributes</string>
+    <string name="talent_roll_style_menu">Rollstyle Talent</string>
+    <string name="new_talent_hint">Enter talent name</string>
+    <string name="talent_mod">mod</string>
+</resources>
