@@ -1,5 +1,6 @@
 package no.domain.diceandtalents;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;
@@ -11,6 +12,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,17 +66,17 @@ public class Dice extends ListActivity
         buttons = new Button[button_ids.length];
         for (int i = 0; i < button_ids.length; i++)
         {
-            buttons[i] = (Button) findViewById(button_ids[i]);
+            buttons[i] = findViewById(button_ids[i]);
             buttons[i].setOnClickListener(this);
             buttons[i].setOnLongClickListener(this);
             //buttons[i].getBackground().setColorFilter(button_colors[i], PorterDuff.Mode.MULTIPLY);
         }
-        button_more = (Button) findViewById(R.id.more);
+        button_more = findViewById(R.id.more);
         button_more.setOnClickListener(this);
         //button_more.getBackground().setColorFilter(button_colors[4], PorterDuff.Mode.MULTIPLY);
-        talent_button = (Button) findViewById(R.id.talent_intent);
+        talent_button = findViewById(R.id.talent_intent);
         talent_button.setOnClickListener(this);
-        resultview = (TextView) findViewById(R.id.rollresult);
+        resultview = findViewById(R.id.rollresult);
         resultlog = new RollResultAdapter(this);
         setListAdapter(resultlog);
 
@@ -289,22 +291,19 @@ public class Dice extends ListActivity
         return true;
     }
 
-    static final Integer[] SPIN_COUNT = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     static final Integer[] SPIN_SIDES = {2, 3, 4, 6, 8, 10, 12, 20, 30, 100};
-    static final Integer[] SPIN_MODIFIER = {-10, -9, -8, -7, -6, -5, -4, -3, -2, -1,
-            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     NumberPicker setupNumPicker(View group, int r_id, int defVal)
     {
-        NumberPicker sp = (NumberPicker) group.findViewById(r_id);
+        NumberPicker sp = group.findViewById(r_id);
         sp.setValue(defVal);
         return sp;
     }
 
     Spinner setupSpinner(View group, int r_id, Integer[] values, int defVal)
     {
-        Spinner sp = (Spinner) group.findViewById(r_id);
-        ArrayAdapter adapter = new ArrayAdapter<Integer>(this, R.layout.spinner_item, values);
+        Spinner sp = group.findViewById(r_id);
+        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
         for (int i = 0; i < values.length; i++)
@@ -322,6 +321,8 @@ public class Dice extends ListActivity
     {
         android.view.LayoutInflater inflater = (android.view.LayoutInflater) getSystemService(
                 LAYOUT_INFLATER_SERVICE);
+        assert inflater != null;
+        @SuppressLint("InflateParams")
         final View group = inflater.inflate(R.layout.dg_configure, null, false);
         final NumberPicker np_c = setupNumPicker(group, R.id.spin_count, defaults.getCount());
         final Spinner sp_s = setupSpinner(group, R.id.spin_sides, SPIN_SIDES, defaults.getSides());
@@ -351,7 +352,7 @@ public class Dice extends ListActivity
                             {
                                 DiceSet ds = DiceSet.getDiceSet(np_c.getValue(),
                                         (Integer) sp_s.getSelectedItem(),
-                                        (Integer) np_m.getValue()-50);
+                                         np_m.getValue()-50);
                                 onOk.onDiceChange(ds);
                             }
                         })
@@ -363,7 +364,7 @@ public class Dice extends ListActivity
     // choose a DiceSet from the last-used list
     void selectDice(final DiceSet defaults, boolean hideBtns, final OnDiceChange onOk)
     {
-        final ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
+        final ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item);
         dicecache.populate(adapter, hideBtns ? java.util.Arrays.asList(button_cfg)
                 : new ArrayList<DiceSet>());
@@ -401,7 +402,7 @@ abstract class OnDiceChange
 // this class contains all the data needed to store the results of a single dice roll
 class RollResult
 {
-    String result;
+    private String result;
     int color;
 
     RollResult(String res, int col)
@@ -415,7 +416,7 @@ class RollResult
         color = col;
     }
 
-    public void showDetails(Context ctx)
+    void showDetails(Context ctx)
     {
         new AlertDialog.Builder(ctx)
                 .setTitle(R.string.roll_result)
