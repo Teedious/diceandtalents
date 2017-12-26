@@ -70,4 +70,6 @@
     <string name="attr_placeholder" translatable="false">%1$s · %2$s · %3$s</string>
     <string name="throw_placeholder" translatable="false">%1$d · %2$d · %3$d</string>
     <string name="app_name_long">Dice and Talents</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

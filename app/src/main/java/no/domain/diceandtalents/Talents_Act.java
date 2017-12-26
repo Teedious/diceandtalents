@@ -1,5 +1,6 @@
 package no.domain.diceandtalents;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -27,7 +28,9 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Talents_Act extends AppCompatActivity implements ListView.OnItemClickListener, ListView.OnItemLongClickListener
+public class Talents_Act
+        extends AppCompatActivity
+        implements ListView.OnItemClickListener, ListView.OnItemLongClickListener
 {
     private final String ST_FILENAME = "saved_talents";
     public static final String PREFS_NAME = "ListPrefs";
@@ -42,7 +45,6 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
     private NumberPicker mod;
     MenuItem itemNewTal, itemEditAttr, itemTalentSettings;
     private Random rng;
-
     String TAG = "TalAct";
 
     @Override
@@ -52,27 +54,26 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
         setContentView(R.layout.activity_talents);
         rng = new Random();
         rng.setSeed(SystemClock.currentThreadTimeMillis());
-
-        Toolbar tBar = (Toolbar) findViewById(R.id.tal_toolbar);
+        Toolbar tBar = findViewById(R.id.tal_toolbar);
         setSupportActionBar(tBar);
 
         attrValTextViews = new TextView[IDHolder.attrIDs.length];
         for(int i=0;i<IDHolder.attrIDs.length;i++){
-            attrValTextViews[i] = (TextView) findViewById(IDHolder.attrIDs[i]);
+            attrValTextViews[i] = findViewById(IDHolder.attrIDs[i]);
             attrValTextViews[i].setText(String.valueOf(Attributes.getValues()[i]));
         }
 
         restoreTalentData();
         t=new TalentListAdapter(this, R.layout.talent_list_row, data);
-        talentList = (ListView) findViewById(R.id.talentList);
+        talentList = findViewById(R.id.talentList);
         talentList.setAdapter(t);
         talentList.setOnItemClickListener(this);
         talentList.setOnItemLongClickListener(this);
 
-        resultView = (TextView) findViewById(R.id.talent_result_view);
-        rollInfoView = (TextView) findViewById(R.id.talent_roll_info_view);
+        resultView = findViewById(R.id.talent_result_view);
+        rollInfoView = findViewById(R.id.talent_roll_info_view);
 
-        mod = (NumberPicker) findViewById(R.id.mod_picker);
+        mod = findViewById(R.id.mod_picker);
         mod.setMinValue(0);
         mod.setMaxValue(40);
         mod.setValue(20);
@@ -168,10 +169,12 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
         final NumberPicker[] attrs = new NumberPicker[8];
         android.view.LayoutInflater inflater = (android.view.LayoutInflater) getSystemService(
                 LAYOUT_INFLATER_SERVICE);
+        assert inflater != null;
+        @SuppressLint("InflateParams")
         final View group = inflater.inflate(R.layout.attributes_pop_up, null, false);
         final int[] attrVals = Attributes.getValues();
         for(int i=0;i<attrs.length;i++){
-            attrs[i]= (NumberPicker) group.findViewById(IDHolder.attrNPIDs[i]);
+            attrs[i]= group.findViewById(IDHolder.attrNPIDs[i]);
             attrs[i].setMaxValue(30);
             attrs[i].setMinValue(0);
             attrs[i].setValue(attrVals[i]);
@@ -184,12 +187,11 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
                         {
                             public void onClick(DialogInterface dialog, int which)
                             {
-                               int[] newAttrVals = attrVals;
-                                for(int i=0;i<newAttrVals.length;i++){
-                                    newAttrVals[i]=attrs[i].getValue();
-                                    attrValTextViews[i].setText(String.valueOf(newAttrVals[i]));
+                                for(int i = 0; i< attrVals.length; i++){
+                                    attrVals[i]=attrs[i].getValue();
+                                    attrValTextViews[i].setText(String.valueOf(attrVals[i]));
                                 }
-                                if(!Attributes.setValues(newAttrVals))Log.e(TAG, "Attributes weren't set correctly");
+                                if(!Attributes.setValues(attrVals))Log.e(TAG, "Attributes weren't set correctly");
                             }
                         })
                 .setNegativeButton(android.R.string.cancel,null)
@@ -201,13 +203,15 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
         final NumberPicker[] attrNP = new NumberPicker[3];
         android.view.LayoutInflater inflater = (android.view.LayoutInflater) getSystemService(
                 LAYOUT_INFLATER_SERVICE);
+        assert inflater != null;
+        @SuppressLint("InflateParams")
         final View group = inflater.inflate(R.layout.add_talent, null, false);
-        final NumberPicker valueNP = (NumberPicker) group.findViewById(R.id.talentValPicker);
+        final NumberPicker valueNP = group.findViewById(R.id.talentValPicker);
         valueNP.setMinValue(Talent.MIN_VAL);
         valueNP.setMaxValue(Talent.MAX_VAL);
-        final EditText name = (EditText) group.findViewById(R.id.edit_talent_name);
+        final EditText name = group.findViewById(R.id.edit_talent_name);
         for(int index = 0; index < attrNP.length; index++){
-            attrNP[index] = (NumberPicker) group.findViewById(IDHolder.tAttrNPIDs[index]);
+            attrNP[index] = group.findViewById(IDHolder.tAttrNPIDs[index]);
             attrNP[index].setDisplayedValues(Attributes.ATTR_NUM_STR.clone());
             attrNP[index].setMaxValue(7);
             attrNP[index].setMinValue(0);
@@ -282,12 +286,8 @@ public class Talents_Act extends AppCompatActivity implements ListView.OnItemCli
         return true;
     }
 
-    NumberPicker retNP (View group, int ID){
-        return (NumberPicker) group.findViewById(ID);
-    }
-
     void makeData(){
-        data = new ArrayList<Talent>(32);
+        data = new ArrayList<>(32);
         data.add(new Talent("Athletik", 5,2,3,0));
         data.add(new Talent("Klettern", 0,5,7,2));
         data.add(new Talent("Körperbeherrschung", 0,2,5,8));
