@@ -23,7 +23,7 @@
                 android:id="@+id/textView_E_0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_co"
+                android:text="MU"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -43,7 +43,7 @@
                 android:id="@+id/textView_E_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_cl"
+                android:text="KL"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -63,7 +63,7 @@
                 android:id="@+id/textView_E_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_in"
+                android:text="IN"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -83,7 +83,7 @@
                 android:id="@+id/textView_E_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_ch"
+                android:text="CH"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -103,7 +103,7 @@
                 android:id="@+id/textView_E_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_de"
+                android:text="FF"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -123,7 +123,7 @@
                 android:id="@+id/textView_E_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_ag"
+                android:text="GE"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -143,7 +143,7 @@
                 android:id="@+id/textView_E_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_cn"
+                android:text="KO"
                 android:textAlignment="center" />
 
             <NumberPicker
@@ -163,7 +163,7 @@
                 android:id="@+id/textView_E_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/attr_st"
+                android:text="KK"
                 android:textAlignment="center" />
 
             <NumberPicker
